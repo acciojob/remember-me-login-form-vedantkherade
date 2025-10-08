@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		existing.style.display = "block";
 	}
 
-	submit.addEventListener("click", function() {
+	submit.addEventListener("click", function(e) {
 		e.preventDefault();
 		alert("Logged in as" + username.value);
 
@@ -23,5 +23,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			localStorage.removeItem("password");
 		}
 	});
+
+	existing.addEventListener("click", () => {
+		alert("Logged in as " + localStorage.getItem("username"));
+	})
 });
 
