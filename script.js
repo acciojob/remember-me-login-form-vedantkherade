@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	submit.addEventListener("click", function(e) {
 		e.preventDefault();
-		alert("Logged in as" + username.value);
+		alert("Logged in as " + username.value);
 
 		if(checkBox.checked){
 			localStorage.setItem("username", username.value);
